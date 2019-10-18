@@ -1,0 +1,30 @@
+{
+  "name": "leetcode-solution-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint './leetcode/**/*.js'",
+    "lint:fix": "npm run lint --fix",
+    "test": "ava",
+    "test:all": "ava leetcode/*.js",
+    "cov": "nyc npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test:all"
+    }
+  }
+}
